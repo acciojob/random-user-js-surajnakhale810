@@ -16,8 +16,7 @@ async function myFunction() {
     let response1 = await response.json();
     let user = await response1.results[0]
     //    console.log(user) 
-    myWork(user);
-}
+    // myWork(user);
 
 function myWork(user) {
     btnName.innerText = `${user.name.title} ${user.name.first} ${user.name.last}`
@@ -30,6 +29,8 @@ function myWork(user) {
     displayEmail = user.email
     displayPhone = user.phone
 
+}
+return myWork(user);
 }
 function ageFun() {
     additionalInform.innerText = displayAge
